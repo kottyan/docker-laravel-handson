@@ -2,9 +2,9 @@ build:
   docker:
     php: docker/php/Dockerfile
   config:
-    APP_NAME=Laravel
-    APP_ENV=production
-    APP_KEY=base64:UI7Ovp7VWh0VeK8EiRotnT0ZOTbLSvaTtqauCDdjwpw=
+    - APP_NAME=Laravel
+    - APP_ENV=production
+    - APP_KEY=base64:UI7Ovp7VWh0VeK8EiRotnT0ZOTbLSvaTtqauCDdjwpw=
   # release:
   # command:
   #   - composer install && php artisan migrate
