@@ -13,9 +13,9 @@ ENV COMPOSER_HOME /composer
 # e 異常ステータスは即座に終了　u 未割り当ての変数はエラー　x コマンドを実行したときコマンドと引数を表示
 
 RUN set -eux && \
-#   apk add --update-cache --no-cache --virtual=.build-dependencies tzdata && \
+  apk add --update-cache --no-cache --virtual=.build-dependencies tzdata && \
 #   cp /usr/share/zoneinfo/${TZ} /etc/localtime && \
-#   apk del .build-dependencies && \
+  apk del .build-dependencies && \
   docker-php-ext-install bcmath pdo_mysql && \
   curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer && \
   composer config -g repos.packagist composer https://packagist.jp && \
